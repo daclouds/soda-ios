@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
-class RecipientGroup {
+class RecipientGroup: Object {
     // MARK: Properties
     
-    var name: String
+    dynamic var name = ""
     
     // MARK: Intialization
     
     init?(name: String) {
         // Initialize stored properties.
+        super.init()
         self.name = name
         
         if name.isEmpty {
             return nil
         }
+    }
+    
+    required init() {
+        fatalError("init() has not been implemented")
     }
 }
 

@@ -10,6 +10,10 @@
 		ED267E4F1CAE5BD0005E2735 /* RecipientGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED267E4E1CAE5BD0005E2735 /* RecipientGroupTableViewController.swift */; };
 		ED267E531CAE5C34005E2735 /* RecipientGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED267E521CAE5C34005E2735 /* RecipientGroup.swift */; };
 		ED267E571CAE6C87005E2735 /* RecipientGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED267E561CAE6C87005E2735 /* RecipientGroupViewController.swift */; };
+		ED267E5A1CAE730E005E2735 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED267E581CAE730E005E2735 /* Realm.framework */; };
+		ED267E5B1CAE730E005E2735 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED267E581CAE730E005E2735 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED267E5C1CAE730E005E2735 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED267E591CAE730E005E2735 /* RealmSwift.framework */; };
+		ED267E5D1CAE730E005E2735 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED267E591CAE730E005E2735 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDB9CF6E1C9921E800422E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9CF6D1C9921E800422E38 /* AppDelegate.swift */; };
 		EDB9CF701C9921E800422E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9CF6F1C9921E800422E38 /* ViewController.swift */; };
 		EDB9CF731C9921E800422E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB9CF711C9921E800422E38 /* Main.storyboard */; };
@@ -17,10 +21,27 @@
 		EDB9CF781C9921E800422E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB9CF761C9921E800422E38 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ED267E5E1CAE730E005E2735 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED267E5D1CAE730E005E2735 /* RealmSwift.framework in Embed Frameworks */,
+				ED267E5B1CAE730E005E2735 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		ED267E4E1CAE5BD0005E2735 /* RecipientGroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientGroupTableViewController.swift; sourceTree = "<group>"; };
 		ED267E521CAE5C34005E2735 /* RecipientGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientGroup.swift; sourceTree = "<group>"; };
 		ED267E561CAE6C87005E2735 /* RecipientGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientGroupViewController.swift; sourceTree = "<group>"; };
+		ED267E581CAE730E005E2735 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		ED267E591CAE730E005E2735 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		EDB9CF6A1C9921E800422E38 /* SocialDining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialDining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB9CF6D1C9921E800422E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB9CF6F1C9921E800422E38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED267E5C1CAE730E005E2735 /* RealmSwift.framework in Frameworks */,
+				ED267E5A1CAE730E005E2735 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +67,8 @@
 		EDB9CF611C9921E800422E38 = {
 			isa = PBXGroup;
 			children = (
+				ED267E581CAE730E005E2735 /* Realm.framework */,
+				ED267E591CAE730E005E2735 /* RealmSwift.framework */,
 				EDB9CF6C1C9921E800422E38 /* SocialDining */,
 				EDB9CF6B1C9921E800422E38 /* Products */,
 			);
@@ -83,6 +108,8 @@
 				EDB9CF661C9921E800422E38 /* Sources */,
 				EDB9CF671C9921E800422E38 /* Frameworks */,
 				EDB9CF681C9921E800422E38 /* Resources */,
+				ED267E5E1CAE730E005E2735 /* Embed Frameworks */,
+				ED267E5F1CAE73BA005E2735 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED267E5F1CAE73BA005E2735 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDB9CF661C9921E800422E38 /* Sources */ = {
@@ -262,6 +305,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SocialDining/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.soda.SocialDining;
@@ -274,6 +321,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SocialDining/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.soda.SocialDining;
