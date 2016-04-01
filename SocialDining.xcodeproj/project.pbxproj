@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED267E4F1CAE5BD0005E2735 /* RecipientGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED267E4E1CAE5BD0005E2735 /* RecipientGroupTableViewController.swift */; };
+		ED267E531CAE5C34005E2735 /* RecipientGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED267E521CAE5C34005E2735 /* RecipientGroup.swift */; };
+		ED267E571CAE6C87005E2735 /* RecipientGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED267E561CAE6C87005E2735 /* RecipientGroupViewController.swift */; };
 		EDB9CF6E1C9921E800422E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9CF6D1C9921E800422E38 /* AppDelegate.swift */; };
 		EDB9CF701C9921E800422E38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9CF6F1C9921E800422E38 /* ViewController.swift */; };
 		EDB9CF731C9921E800422E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB9CF711C9921E800422E38 /* Main.storyboard */; };
 		EDB9CF751C9921E800422E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB9CF741C9921E800422E38 /* Assets.xcassets */; };
 		EDB9CF781C9921E800422E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB9CF761C9921E800422E38 /* LaunchScreen.storyboard */; };
-		EDB9CF801C9923E000422E38 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9CF7F1C9923E000422E38 /* GroupTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED267E4E1CAE5BD0005E2735 /* RecipientGroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientGroupTableViewController.swift; sourceTree = "<group>"; };
+		ED267E521CAE5C34005E2735 /* RecipientGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientGroup.swift; sourceTree = "<group>"; };
+		ED267E561CAE6C87005E2735 /* RecipientGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientGroupViewController.swift; sourceTree = "<group>"; };
 		EDB9CF6A1C9921E800422E38 /* SocialDining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialDining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB9CF6D1C9921E800422E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB9CF6F1C9921E800422E38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +28,6 @@
 		EDB9CF741C9921E800422E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDB9CF771C9921E800422E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDB9CF791C9921E800422E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDB9CF7F1C9923E000422E38 /* GroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,9 @@
 				EDB9CF741C9921E800422E38 /* Assets.xcassets */,
 				EDB9CF761C9921E800422E38 /* LaunchScreen.storyboard */,
 				EDB9CF791C9921E800422E38 /* Info.plist */,
-				EDB9CF7F1C9923E000422E38 /* GroupTableViewController.swift */,
+				ED267E4E1CAE5BD0005E2735 /* RecipientGroupTableViewController.swift */,
+				ED267E521CAE5C34005E2735 /* RecipientGroup.swift */,
+				ED267E561CAE6C87005E2735 /* RecipientGroupViewController.swift */,
 			);
 			path = SocialDining;
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB9CF701C9921E800422E38 /* ViewController.swift in Sources */,
+				ED267E571CAE6C87005E2735 /* RecipientGroupViewController.swift in Sources */,
+				ED267E4F1CAE5BD0005E2735 /* RecipientGroupTableViewController.swift in Sources */,
 				EDB9CF6E1C9921E800422E38 /* AppDelegate.swift in Sources */,
-				EDB9CF801C9923E000422E38 /* GroupTableViewController.swift in Sources */,
+				ED267E531CAE5C34005E2735 /* RecipientGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +300,7 @@
 				EDB9CF7E1C9921E800422E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

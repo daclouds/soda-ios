@@ -1,15 +1,26 @@
 //
-//  GroupTableViewController.swift
+//  RecipientGroupTableViewController.swift
 //  SocialDining
 //
-//  Created by 1001914 on 2016. 3. 16..
+//  Created by daclouds on 2016. 4. 1..
 //  Copyright © 2016년 soda. All rights reserved.
 //
 
 import UIKit
 
-class GroupTableViewController: UITableViewController {
+class RecipientGroupTableViewController: UITableViewController {
 
+    // MARK: Properties
+    
+    var recipientGroups = [RecipientGroup]()
+    var recipientGroup = RecipientGroup?()
+    
+    func loadSampleRecipientGroups() {
+        let developers = RecipientGroup(name: "괴발자 동지들")!
+        let weirdMeetup = RecipientGroup(name: "이상한 모임")!
+        recipientGroups += [developers, weirdMeetup]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +29,8 @@ class GroupTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadSampleRecipientGroups()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +42,23 @@ class GroupTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return recipientGroups.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
+        let recipientGroup = recipientGroups[indexPath.row]
+        cell.textLabel?.text = recipientGroup.name
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +104,13 @@ class GroupTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindToRecipientGroups(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? RecipientGroupViewController, recipientGroup = sourceViewController.recipientGroup {
+            let newIndexPath = NSIndexPath(forRow: recipientGroups.count, inSection: 0)
+            recipientGroups.append(recipientGroup)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
 
 }

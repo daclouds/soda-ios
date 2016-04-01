@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SocialDining
 //
-//  Created by 1001914 on 2016. 3. 16..
+//  Created by daclouds on 2016. 3. 16..
 //  Copyright © 2016년 soda. All rights reserved.
 //
 
