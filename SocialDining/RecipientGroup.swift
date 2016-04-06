@@ -27,7 +27,8 @@ class RecipientGroup: Object {
     }
     
     required init() {
-        fatalError("init() has not been implemented")
+//        fatalError("init() has not been implemented")
+        super.init()
     }
 }
 

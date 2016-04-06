@@ -8,9 +8,39 @@
 
 import UIKit
 
+extension UIColor {
+    // Creates a UIColor from a Hex string.
+    convenience init(hexString: String) {
+        var cString: String = hexString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+        
+        if (cString.hasPrefix("#")) {
+            cString = (cString as NSString).substringFromIndex(1)
+        }
+        
+        if (cString.characters.count != 6) {
+            self.init(white: 0.5, alpha: 1.0)
+        } else {
+            let rString: String = (cString as NSString).substringToIndex(2)
+            let gString = ((cString as NSString).substringFromIndex(2) as NSString).substringToIndex(2)
+            let bString = ((cString as NSString).substringFromIndex(4) as NSString).substringToIndex(2)
+            
+            var r: CUnsignedInt = 0, g: CUnsignedInt = 0, b: CUnsignedInt = 0;
+            NSScanner(string: rString).scanHexInt(&r)
+            NSScanner(string: gString).scanHexInt(&g)
+            NSScanner(string: bString).scanHexInt(&b)
+            
+            self.init(red: CGFloat(r) / CGFloat(255.0), green: CGFloat(g) / CGFloat(255.0), blue: CGFloat(b) / CGFloat(255.0), alpha: CGFloat(1))
+        }
+        
+        
+    }
+}
+
 class RecipientGroupTableViewController: UITableViewController {
 
     // MARK: Properties
+    
+    let colors = ["#F44336", "#E91E63" , "#9C27B0", "#673AB7", "#3F51B5", "2196F3", "#03A9F4", "#00BCD4", "#009688", "#4CAF50", "#8BC34A", "#CDDC39", "#FFEB3B", "#FFC107", "#FF9800", "#FF5722"]
     
     var recipientGroups = [RecipientGroup]()
     var recipientGroup = RecipientGroup?()
@@ -56,6 +86,8 @@ class RecipientGroupTableViewController: UITableViewController {
         // Configure the cell...
         let recipientGroup = recipientGroups[indexPath.row]
         cell.textLabel?.text = recipientGroup.name
+        
+        cell.backgroundColor = UIColor(hexString: colors[Int(arc4random_uniform(16))])
 
         return cell
     }

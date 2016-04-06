@@ -3,22 +3,23 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Group-->
         <scene sceneID="kZW-SL-ci0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="khh-KD-PPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ISD-xj-cCU" customClass="RecipientGroupTableViewController" customModule="SocialDining" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mgH-WM-P6e">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="n3X-KR-5EM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n3X-KR-5EM" id="St8-Rr-Tbz">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -28,7 +29,7 @@
                             <outlet property="delegate" destination="ISD-xj-cCU" id="owD-Yo-dpU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="j1y-cG-evZ">
+                    <navigationItem key="navigationItem" title="Group" id="j1y-cG-evZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="930-9x-kkp">
                             <connections>
                                 <segue destination="wBE-cU-ABS" kind="presentation" id="ZRr-3F-Wc3"/>
@@ -36,6 +37,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khh-KD-PPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-292.5" y="316.5"/>
         </scene>
@@ -48,42 +50,78 @@
                         <viewControllerLayoutGuide type="bottom" id="Hg1-sW-sVJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sXA-Tm-PcV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoQ-0a-A1H">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="72" width="60" height="21"/>
-                                </variation>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="nameTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPi-Da-det">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="101" width="360" height="30"/>
-                                </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoQ-0a-A1H">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8RP-KT-RDa"/>
+                                    <constraint firstAttribute="width" constant="97" id="I3q-hq-1Im"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8RP-KT-RDa"/>
+                                        <exclude reference="I3q-hq-1Im"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8RP-KT-RDa"/>
+                                        <include reference="I3q-hq-1Im"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UPi-Da-det" firstAttribute="top" secondItem="BoQ-0a-A1H" secondAttribute="bottom" constant="8" id="5SQ-ix-dxs"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UPi-Da-det" secondAttribute="leading" id="7ZQ-sg-Slx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="BoQ-0a-A1H" secondAttribute="leading" id="MoK-R3-WtY"/>
+                            <constraint firstItem="BoQ-0a-A1H" firstAttribute="top" secondItem="B4G-Nh-WQd" secondAttribute="bottom" constant="8" id="RmP-Dp-5uj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UPi-Da-det" secondAttribute="trailing" id="piK-Ja-kwh"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="BoQ-0a-A1H"/>
                                 <exclude reference="UPi-Da-det"/>
+                                <exclude reference="BoQ-0a-A1H"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MoK-R3-WtY"/>
+                                <exclude reference="RmP-Dp-5uj"/>
+                                <exclude reference="5SQ-ix-dxs"/>
+                                <exclude reference="7ZQ-sg-Slx"/>
+                                <exclude reference="piK-Ja-kwh"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="BoQ-0a-A1H"/>
                                 <include reference="UPi-Da-det"/>
+                                <include reference="BoQ-0a-A1H"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MoK-R3-WtY"/>
+                                <include reference="RmP-Dp-5uj"/>
+                                <include reference="5SQ-ix-dxs"/>
+                                <include reference="7ZQ-sg-Slx"/>
+                                <include reference="piK-Ja-kwh"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="DCs-1j-glc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RHP-lh-sHC"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RHP-lh-sHC">
+                            <connections>
+                                <segue destination="Y91-uy-Qsx" kind="unwind" unwindAction="unwindToRecipientGroups:" id="Edq-HC-tLu"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="40z-6b-ZeB">
                             <connections>
                                 <segue destination="Y91-uy-Qsx" kind="unwind" unwindAction="unwindToRecipientGroups:" id="b2X-6c-6A6"/>
